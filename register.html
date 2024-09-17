@@ -207,7 +207,7 @@
         test.innerHTML = "3";
         for (i = 1; i < 11; i++) {
           test.innerHTML = "4";
-          if (window["slot".concat(i.toString())] == event.target.src.substring(4, 6)) {
+          if (window["slot".concat(i.toString())] == event.target.id) {
             test.innerHTML = "5";
             window["slot".concat(i.toString())] = "00";
           }
@@ -218,7 +218,7 @@
           test.innerHTML = "7";
           if (window["slot".concat(i.toString())] == "00") {
             test.innerHTML = "8";
-            window["slot".concat(i.toString())] = event.target.src.substring(4, 6);
+            window["slot".concat(i.toString())] = event.target.id;
             test.innerHTML = "9";
             break;
             test.innerHTML = "10";
