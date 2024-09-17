@@ -234,6 +234,7 @@
       } else {
         testVar = i.toString();
       }
+      test.innerHTML = testVar;
       for (a = 1; i < 11; i++) {
         if (window["slot".concat(a.toString())] == testVar) {
           document.getElementById(testVar).style.opacity = "1";
