@@ -202,13 +202,13 @@
       }
     } else {
       if (event.target.style.opacity == "1") {
-        for (i = 0; i < 10; i++) {
+        for (i = 1; i < 11; i++) {
           if (window["slot".concat(i.toString())] == event.target.src.substring(4, 5)) {
             window["slot".concat(i.toString())] = "00";
           }
         }
       } else {
-        for (i = 0; i < 10; i++) {
+        for (i = 1; i < 11; i++) {
           if (window["slot".concat(i.toString())] == "00") {
             window["slot".concat(i.toString())] = event.target.stc.substring(4, 5);
             break;
