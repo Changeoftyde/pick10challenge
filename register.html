@@ -235,6 +235,7 @@
         testVar = i.toString();
       }
       for (a = 1; a < 11; a++) {
+        test.innerHTML = window["slot".concat(a.toString())].concat(" ", testVar);
         if (window["slot".concat(a.toString())] == testVar) {
           document.getElementById(testVar).style.opacity = "1";
         } else { document.getElementById(testVar).style.opacity = "0.5"; }
