@@ -192,6 +192,7 @@
   slot9 = "00";
   slot10 = "00";
   function toggle() {
+    test = document.getElementById("test");
     document.getElementById("test").innerHTML = "1";
     type = event.target.tagName.toLowerCase();
     if (type == "select") {
@@ -201,17 +202,26 @@
         window["slot".concat(event.target.id.substring(4))] = event.target.value;
       }
     } else {
+      test.innerHTML = "2";
       if (event.target.style.opacity == "1") {
+        test.innerHTML = "3";
         for (i = 1; i < 11; i++) {
+          test.innerHTML = "4";
           if (window["slot".concat(i.toString())] == event.target.src.substring(4, 5)) {
+            test.innerHTML = "5";
             window["slot".concat(i.toString())] = "00";
           }
         }
       } else {
+        test.innerHTML = "6";
         for (i = 1; i < 11; i++) {
+          test.innerHTML = "7";
           if (window["slot".concat(i.toString())] == "00") {
+            test.innerHTML = "8";
             window["slot".concat(i.toString())] = event.target.stc.substring(4, 5);
+            test.innerHTML = "9";
             break;
+            test.innerHTML = "10";
           }
         }
       }
