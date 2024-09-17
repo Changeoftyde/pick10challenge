@@ -218,6 +218,7 @@
     updateDisplays();
   }
   function updateDisplays() {
+    document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
     for (i = 1; i < 65; i++) {
       if (i.toString().length == 1) {
         testVar = "0".concat(i.toString());
