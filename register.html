@@ -241,23 +241,7 @@
         } else { document.getElementById(testVar).style.opacity = "0.5"; }
       }
     }
-    for (i = 1; i < 11; i++) {
-      for (a = 1; a < 65; a++) {
-        for (b = 1; b < 11; b++) {
-          if (document.getElementById("opt".concat(i.toString(), ".", a.toString())).value == (parseInt(window["slot".concat(b.toString())])).toString()) {
-            document.getElementById("opt".concat(i.toString(), ".", a.toString())).disabled = true;
-          } else {
-            document.getElementById("opt".concat(i.toString(), ".", a.toString())).disabled = false;
-          }
-        }
-      }
-    }
-    for (i = 1; i < 11; i++) {
-      document.getElementById("s".concat(i.toString())).src = "team".concat(window["slot".concat(i.toString())], ".png");
-    }
-    for (i = 1; i < 11; i++) {
-      document.getElementById("drop".concat(i.toString())).value = (parseInt(window["slot".concat(b.toString())])).toString());
-    }
+    
   }
   se1 = "Team 1";
   se2 = "Team 2";
