@@ -210,6 +210,7 @@
           if (window["slot".concat(i.toString())] == event.target.id) {
             test.innerHTML = "5";
             window["slot".concat(i.toString())] = "00";
+            event.target.style.opacity = 0;
           }
         }
       } else {
@@ -221,14 +222,16 @@
             window["slot".concat(i.toString())] = event.target.id;
             test.innerHTML = "9";
             break;
+            event.target.style.opacity = 1;
             test.innerHTML = "10";
           }
         }
       }
     }
-    }
+    
     document.getElementById("test").innerHTML = "2";
     document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
+  }
   se1 = "Team 1";
   se2 = "Team 2";
   se3 = "Team 3";
