@@ -210,7 +210,7 @@
           if (window["slot".concat(i.toString())] == event.target.id) {
             test.innerHTML = "5";
             window["slot".concat(i.toString())] = "00";
-            event.target.style.opacity = 0;
+            event.target.style.opacity = "0";
           }
         }
       } else {
@@ -222,7 +222,7 @@
             window["slot".concat(i.toString())] = event.target.id;
             test.innerHTML = "9";
             break;
-            event.target.style.opacity = 1;
+            event.target.style.opacity = "1";
             test.innerHTML = "10";
           }
         }
