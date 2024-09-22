@@ -232,20 +232,6 @@
     }
     document.getElementById("test").innerHTML = "2";
     document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
-    for (i = 1; i < 65; i++) {
-      if (i.toString().length == 1) {
-        testVar = "0".concat(i.toString());
-      } else {
-        testVar = i.toString();
-      }
-      for (a = 1; a < 11; a++) {
-        if (window["slot".concat(a.toString())] == testVar) {
-          document.getElementById(testVar).style.opacity = "1";
-          break;
-        } else { document.getElementById(testVar).style.opacity = "0.5"; }
-      }
-    }
-  }
   se1 = "Team 1";
   se2 = "Team 2";
   se3 = "Team 3";
