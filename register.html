@@ -246,6 +246,10 @@
         }
       }
     }
+    for (i = 1; i < 11; i++) {
+      if (parseInt(window["slot".concat(i.toString())]) < 10) { ReelLife = window["slot".concat(i.toString())].substring(1, 2); } else { ReelLife = window["slot".concat(i.toString())]; }
+      document.getElementById("drop".concat(i.toString())).value = ReelLife;
+    }
     document.getElementById("test").innerHTML = "2";
     document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
   }
