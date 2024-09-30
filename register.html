@@ -196,11 +196,14 @@
     document.getElementById("test").innerHTML = "1";
     type = event.target.tagName.toLowerCase();
     if (type == "select") {
+      if (parseInt(window["slot".concat(event.target.id(4))]) < 10) { ReelLife = window["slot".concat(event.target.id(4))].substring(1, 2); } else { ReelLife = window["slot".concat(event.target.id(4))]; }
+      window["se".concat(ReelLife)][1] = false;
       if (event.target.value.length == 1) {
         window["slot".concat(event.target.id.substring(4))] = "0".concat(event.target.value);
       } else {
         window["slot".concat(event.target.id.substring(4))] = event.target.value;
       }
+      window["se".concat(event.target.value)][1] = true;
     } else {
       test.innerHTML = "2";
       if (event.target.style.opacity == "1") {
