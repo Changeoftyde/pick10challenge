@@ -208,7 +208,7 @@
         for (i = 1; i < 11; i++) {
           test.innerHTML = "4";
           if (window["slot".concat(i.toString())] == event.target.id) {
-            if (event.target.id.length == 2) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
+            if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
             test.innerHTML = "5";
             window[se.concat(ReelLife)][1] = false;
             window["slot".concat(i.toString())] = "00";
@@ -223,7 +223,7 @@
             test.innerHTML = "8";
             window["slot".concat(i.toString())] = event.target.id;
             test.innerHTML = "9";
-            if (event.target.id.length == 2) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
+            if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
             event.target.style.opacity = "1";
             window[se.concat(ReelLife)][1] = true;
             break;
