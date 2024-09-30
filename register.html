@@ -1,4 +1,4 @@
-<head>
+head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -210,7 +210,7 @@
           if (window["slot".concat(i.toString())] == event.target.id) {
             if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
             test.innerHTML = "5";
-            window[se.concat(ReelLife)][1] = false;
+            window["se".concat(ReelLife)][1] = false;
             window["slot".concat(i.toString())] = "00";
             event.target.style.opacity = "0.5";
           }
@@ -225,7 +225,7 @@
             test.innerHTML = "9";
             if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
             event.target.style.opacity = "1";
-            window[se.concat(ReelLife)][1] = true;
+            window["se".concat(ReelLife)][1] = true;
             break;
             test.innerHTML = "10";
           }
@@ -238,11 +238,11 @@
     for (i = 1; i < 65; i++) {
       if (window["se".concat(i.toString())][1] == true) {
         for (b = 1; b < 11; b++) {
-          document.getElementById("opt".concat(b.toString(), "." i.toString())).disabled = true;
+          document.getElementById("opt".concat(b.toString(), ".", i.toString())).disabled = true;
         }
       } else {
         for (b = 1; b < 11; b++) {
-          document.getElementById("opt".concat(b.toString(), "." i.toString())).disabled = false;
+          document.getElementById("opt".concat(b.toString(), ".", i.toString())).disabled = false;
         }
       }
     }
