@@ -3,7 +3,7 @@
 </head>
 
 <input type="text" placeholder="Full Name Here" name="name" class="name" id="name">
-<img target="_blank" onclick="mail()" src="Add a heading.zip - 1.png" class="submit">
+<img target="_blank" href="" src="Add a heading.zip - 1.png" id="submit" class="submit">
 <img src="IMG_7583.png" id="bracket" class="bracket">
 <div class="corner">
   <img src="IMG_7765.png" class="logo">
@@ -299,12 +299,15 @@
       if (window["slot".concat(i.toString())] == "00") {
         tryAgain = 1;
         source = 3;
+        document.getElementById("submit").href = "";
       }
-     }
+    }
     if (tryAgain == 0 && document.getElementById("name").value == "") {
       source = 2;
+      document.getElementById("submit").href = "";
     } else {
       source = 1;
+      document.getElementById("submit").href = "mailto: northkellerlina@gmail.com
     }
   }
   se1 = ["Team 1", false];
