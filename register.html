@@ -178,7 +178,7 @@
   }
   body { margin:0; }
 </style>
-
+<p id="test2">i</p>
 <script>
   howManySelected = 0;
   slot1 = "00";
@@ -196,14 +196,17 @@
     document.getElementById("test").innerHTML = "1";
     type = event.target.tagName.toLowerCase();
     if (type == "select") {
-      if (parseInt(window["slot".concat(event.target.id.substring(4))]) < 10) { ReelLife = window["slot".concat(event.target.id.substring(4))].substring(1, 2); } else { ReelLife = window["slot".concat(event.target.id.substring(4))]; }
-      window["se".concat(ReelLife)][1] = false;
+      v = parseInt(window["slot".concat(event.target.id.substring(4))], 10);
+      if (v != 0) {
+      window["se".concat(v.toString())][1] = false;
+      }
+      window["se".concat(event.target.value)][1] = true;
       if (event.target.value.length == 1) {
         window["slot".concat(event.target.id.substring(4))] = "0".concat(event.target.value);
       } else {
         window["slot".concat(event.target.id.substring(4))] = event.target.value;
       }
-      window["se".concat(event.target.value)][1] = true;
+      
     } else {
       test.innerHTML = "2";
       if (event.target.style.opacity == "1") {
@@ -243,6 +246,7 @@
       document.getElementById("drop".concat(i.toString())).value = ReelLife;
     }
     for (i = 1; i < 65; i++) {
+      document.getElementById("test2").innerHTML = "im running";
       if (window["se".concat(i.toString())][1] == true) {
         for (b = 1; b < 11; b++) {
           document.getElementById("opt".concat(b.toString(), ".", i.toString())).disabled = true;
