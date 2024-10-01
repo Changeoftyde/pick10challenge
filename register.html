@@ -3,6 +3,7 @@
 </head>
 
 <input type="text" placeholder="Full Name Here" name="name" class="name" id="name">
+<img target="_blank" onclick="mail()" src="Add a heading.zip - 1.png" class="submit">
 <img src="IMG_7583.png" id="bracket" class="bracket">
 <div class="corner">
   <img src="IMG_7765.png" class="logo">
@@ -118,6 +119,13 @@
 </select>
 
 <style>
+  .submit {
+    top: 427.5vw;
+    left: 30vw;
+    width: 40vw;
+    height: auto;
+    position: absolute;
+  }
   .name {
     z-index: 200;
     position: absolute;
@@ -284,8 +292,20 @@
         document.getElementById(ReelLife).style.opacity = 0.5;
       }
     }
-    document.getElementById("test").innerHTML = "2";
-    document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
+  }
+  function mail() {
+    tryAgain = 0;
+    for (i = 1; i < 11; i++) {
+      if (window["slot".concat(i.toString())] == "00") {
+        tryAgain = 1;
+        source = 3;
+      }
+     }
+    if (tryAgain == 0 && document.getElementById("name").value == "") {
+      source = 2;
+    } else {
+      source = 1;
+    }
   }
   se1 = ["Team 1", false];
   se2 = ["Team 2", false];
