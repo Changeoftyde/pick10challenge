@@ -257,6 +257,14 @@
         }
       }
     }
+    for (i = 1; i < 65; i++) {
+      if (i < 10) { ReelLife = "0".concat(i.toString()); } else { ReelLife = i.toString(); }
+      if (window["se".concat(i.toString())][1] == true) {
+        document.getElementById(ReelLife).style.opacity = 1;
+      } else {
+        document.getElementById(ReelLife).style.opacity = 0.5;
+      }
+    }
     document.getElementById("test").innerHTML = "2";
     document.getElementById("test").innerHTML = slot1.concat(" ", slot2, " ", slot3, " ", slot4, " ", slot5, " ", slot6, " ", slot7, " ", slot8, " ", slot9, " ", slot10);
   }
