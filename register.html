@@ -2,8 +2,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<input type="text" placeholder="Full Name Here" name="name" class="name" id="name">
-<img target="_blank" href="" src="Add a heading.zip - 1.png" id="submit" class="submit">
+<input onchange="mail()" type="text" placeholder="Full Name Here" name="name" class="name" id="name">
+<img onclick="submit()" target="_blank" href="" src="Add a heading.zip - 1.png" id="submit" class="submit">
 <img src="IMG_7583.png" id="bracket" class="bracket">
 <div class="corner">
   <img src="IMG_7765.png" class="logo">
@@ -292,6 +292,11 @@
         document.getElementById(ReelLife).style.opacity = 0.5;
       }
     }
+    setTimeout(mail, 0);
+  }
+  source = 1;
+  function submit() {
+    event.target.src = "Add a heading.zip - ".concat(source.toString(), ".png");
   }
   function mail() {
     tryAgain = 0;
@@ -307,7 +312,7 @@
       document.getElementById("submit").href = "";
     } else {
       source = 1;
-      document.getElementById("submit").href = "mailto: northkellerlina@gmail.com
+      document.getElementById("submit").href = "mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById(name).value, "'s Entry for the Pick 10 Challenge,&body=Choice 1:", window["se".concat(slot1)][0], "; Choice 2:", window["se".concat(slot2)][0], "; Choice 3:", window["se".concat(slot3)][0], "; Choice 4:", window["se".concat(slot4)][0], "; Choice 5:", window["se".concat(slot5)][0], "; Choice 6:", window["se".concat(slot6)][0], "; Choice 7:", window["se".concat(slot7)][0], "; Choice 8:", window["se".concat(slot8)][0], "; Choice 9:", window["se".concat(slot9)][0], "; Choice 10:", window["se".concat(slot10)][0]);
     }
   }
   se1 = ["Team 1", false];
