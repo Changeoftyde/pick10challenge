@@ -84,9 +84,8 @@
 <img onclick="toggle()" style="left: 84.05vw; top: 234.5vw" id="62" src="team62.png" class="team">
 <img onclick="toggle()" style="left: 84.05vw; top: 241.75vw" id="63" src="team63.png" class="team">
 <img onclick="toggle()" style="left: 84.05vw; top: 247.25vw" id="64" src="team64.png" class="team">
-<img src="IMG_7766.png" class="background">
+<img src="IMG_7964.png" class="background">
 
-<p style="color: white" id="test">uhh</p>
 <select onchange="toggle()" class="select" style="left: 10vw; top: 285vw" id="drop1">
   <option value="0" disabled selected>Choice 1</option>
 </select>
@@ -205,7 +204,6 @@
   }
   body { margin:0; }
 </style>
-<p id="test2">i</p>
 <script>
   howManySelected = 0;
   slot1 = "00";
@@ -219,7 +217,6 @@
   slot9 = "00";
   slot10 = "00";
   function toggle() {
-    test = document.getElementById("test");
     document.getElementById("test").innerHTML = "1";
     type = event.target.tagName.toLowerCase();
     if (type == "select") {
@@ -232,35 +229,25 @@
         window["slot".concat(event.target.id.substring(4))] = "0".concat(event.target.value);
       } else {
         window["slot".concat(event.target.id.substring(4))] = event.target.value;
-      }
-      
+      }      
     } else {
-      test.innerHTML = "2";
       if (event.target.style.opacity == "1") {
-        test.innerHTML = "3";
         for (i = 1; i < 11; i++) {
-          test.innerHTML = "4";
           if (window["slot".concat(i.toString())] == event.target.id) {
             if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
-            test.innerHTML = "5";
             window["se".concat(ReelLife)][1] = false;
             window["slot".concat(i.toString())] = "00";
             event.target.style.opacity = "0.5";
           }
         }
       } else {
-        test.innerHTML = "6";
         for (i = 1; i < 11; i++) {
-          test.innerHTML = "7";
           if (window["slot".concat(i.toString())] == "00") {
-            test.innerHTML = "8";
             window["slot".concat(i.toString())] = event.target.id;
-            test.innerHTML = "9";
             if (parseInt(event.target.id) < 10) { ReelLife = event.target.id.substring(1, 2); } else { ReelLife = event.target.id; }
             event.target.style.opacity = "1";
             window["se".concat(ReelLife)][1] = true;
             break;
-            test.innerHTML = "10";
           }
         }
       }
@@ -388,7 +375,6 @@
   se62 = ["Team 62", false];
   se63 = ["Team 63", false];
   se64 = ["Team 64", false];
-  var testThing = document.getElementById("test");
   for (let a = 0; a < 10; a++) {
     el = document.getElementById("drop".concat((a + 1).toString()));
     for (let i = 0; i < 64; i++) {
