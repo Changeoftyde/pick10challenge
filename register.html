@@ -310,7 +310,7 @@
     if (tryAgain == 0 && document.getElementById("name").value == "") {
       source = 2;
       document.getElementById("submit").removeAttribute("href");
-    } else {
+    } else if (tryAgain == 0) {
       source = 1;
       notURL = "mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById("name").value, "%E2%80%98s Entry for the Pick 10 Challenge&body=Choice 1: ", window["se".concat(parseInt(slot1).toString())][0], "%0A Choice 2: ", window["se".concat(parseInt(slot2).toString())][0], "%0A Choice 3: ", window["se".concat(parseInt(slot3).toString())][0], "%0A Choice 4: ", window["se".concat(parseInt(slot4).toString())][0], "%0A Choice 5: ", window["se".concat(parseInt(slot5).toString())][0], "%0A Choice 6: ", window["se".concat(parseInt(slot6).toString())][0], "%0A Choice 7: ", window["se".concat(parseInt(slot7).toString())][0], "%0A Choice 8: ", window["se".concat(parseInt(slot8).toString())][0], "%0A Choice 9: ", window["se".concat(parseInt(slot9).toString())][0], "%0A Choice 10: ", window["se".concat(parseInt(slot10).toString())][0]);
       url = "";
@@ -322,7 +322,7 @@
       }
       }
       document.getElementById("submit").href = url;
-    }
+    } else {}
   }
   se1 = ["Team 1", false];
   se2 = ["Team 2", false];
