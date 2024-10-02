@@ -3,7 +3,7 @@
 </head>
 
 <input onchange="mail()" type="text" placeholder="Full Name Here" name="name" class="name" id="name">
-<img onclick="submit()" target="_blank" href="" src="Add a heading.zip - 1.png" id="submit" class="submit">
+<a id="submit" target="_blank" href=""><img onclick="submit()" src="Add a heading.zip - 1.png" class="submit" id="subImg"></a>
 <img src="IMG_7583.png" id="bracket" class="bracket">
 <div class="corner">
   <img src="IMG_7765.png" class="logo">
@@ -294,7 +294,7 @@
     }
     setTimeout(mail, 0);
   }
-  source = 1;
+  source = 3;
   function submit() {
     event.target.src = "Add a heading.zip - ".concat(source.toString(), ".png");
   }
@@ -304,15 +304,24 @@
       if (window["slot".concat(i.toString())] == "00") {
         tryAgain = 1;
         source = 3;
-        document.getElementById("submit").href = "";
+        document.getElementById("submit").removeAttribute("href");
       }
     }
     if (tryAgain == 0 && document.getElementById("name").value == "") {
       source = 2;
-      document.getElementById("submit").href = "";
+      document.getElementById("submit").removeAttribute("href");
     } else {
       source = 1;
-      alert("mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById("name").value, "'s Entry for the Pick 10 Challenge,&body=Choice 1:", window["se".concat(parseInt(slot1).toString())][0], "; Choice 2:", window["se".concat(parseInt(slot2).toString())][0], "; Choice 3:", window["se".concat(parseInt(slot3).toString())][0], "; Choice 4:", window["se".concat(parseInt(slot4).toString())][0], "; Choice 5:", window["se".concat(parseInt(slot5).toString())][0], "; Choice 6:", window["se".concat(parseInt(slot6).toString())][0], "; Choice 7:", window["se".concat(parseInt(slot7).toString())][0], "; Choice 8:", window["se".concat(parseInt(slot8).toString())][0], "; Choice 9:", window["se".concat(parseInt(slot9).toString())][0], "; Choice 10:", window["se".concat(parseInt(slot10).toString())][0]));
+      notURL = "mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById("name").value, "%E2%80%98s Entry for the Pick 10 Challenge&body=Choice 1: ", window["se".concat(parseInt(slot1).toString())][0], "%0A Choice 2: ", window["se".concat(parseInt(slot2).toString())][0], "%0A Choice 3: ", window["se".concat(parseInt(slot3).toString())][0], "%0A Choice 4: ", window["se".concat(parseInt(slot4).toString())][0], "%0A Choice 5: ", window["se".concat(parseInt(slot5).toString())][0], "%0A Choice 6: ", window["se".concat(parseInt(slot6).toString())][0], "%0A Choice 7: ", window["se".concat(parseInt(slot7).toString())][0], "%0A Choice 8: ", window["se".concat(parseInt(slot8).toString())][0], "%0A Choice 9: ", window["se".concat(parseInt(slot9).toString())][0], "%0A Choice 10: ", window["se".concat(parseInt(slot10).toString())][0]);
+      url = "";
+      for (i = 0; i < notURL.length; i++) {
+      if (notURL[i] === ' ') {
+        url += '%20';
+      } else {
+        url += notURL[i];
+      }
+      }
+      document.getElementById("submit").href = url;
     }
   }
   se1 = ["Team 1", false];
