@@ -298,7 +298,13 @@
       document.getElementById("submit").removeAttribute("href");
     } else if (tryAgain == 0) {
       source = 1;
-      notURL = "mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById("name").value, "%E2%80%98s Entry for the Pick 10 Challenge&body=Choice 1: ", window["se".concat(parseInt(slot1).toString())][0], "%0A Choice 2: ", window["se".concat(parseInt(slot2).toString())][0], "%0A Choice 3: ", window["se".concat(parseInt(slot3).toString())][0], "%0A Choice 4: ", window["se".concat(parseInt(slot4).toString())][0], "%0A Choice 5: ", window["se".concat(parseInt(slot5).toString())][0], "%0A Choice 6: ", window["se".concat(parseInt(slot6).toString())][0], "%0A Choice 7: ", window["se".concat(parseInt(slot7).toString())][0], "%0A Choice 8: ", window["se".concat(parseInt(slot8).toString())][0], "%0A Choice 9: ", window["se".concat(parseInt(slot9).toString())][0], "%0A Choice 10: ", window["se".concat(parseInt(slot10).toString())][0]);
+      numCode1 = Math.round(Math.random() * 36);
+      numCode2 = Math.round(Math.random() * 36);
+      numCode3 = Math.round(Math.random() * 36);
+      numCode4 = Math.round(Math.random() * 36);
+      digit = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+      Code = digit[numCode1].concat(digit[numCode2], digit[numCode3], digit[numCode4]);
+      notURL = "mailto: northkellerlina@gmail.com?subject=".concat(document.getElementById("name").value, "%E2%80%98s Entry for the Pick 10 Challenge&body=Choice 1: ", window["se".concat(parseInt(slot1).toString())][0], "%0A Choice 2: ", window["se".concat(parseInt(slot2).toString())][0], "%0A Choice 3: ", window["se".concat(parseInt(slot3).toString())][0], "%0A Choice 4: ", window["se".concat(parseInt(slot4).toString())][0], "%0A Choice 5: ", window["se".concat(parseInt(slot5).toString())][0], "%0A Choice 6: ", window["se".concat(parseInt(slot6).toString())][0], "%0A Choice 7: ", window["se".concat(parseInt(slot7).toString())][0], "%0A Choice 8: ", window["se".concat(parseInt(slot8).toString())][0], "%0A Choice 9: ", window["se".concat(parseInt(slot9).toString())][0], "%0A Choice 10: ", window["se".concat(parseInt(slot10).toString())][0], "%0A %0A 4-Digit Code: ", Code);
       url = "";
       for (i = 0; i < notURL.length; i++) {
       if (notURL[i] === ' ') {
