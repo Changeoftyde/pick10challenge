@@ -124,6 +124,7 @@
     width: 40vw;
     height: auto;
     position: absolute;
+    z-index: 150;
   }
   .name {
     z-index: 200;
@@ -217,7 +218,6 @@
   slot9 = "00";
   slot10 = "00";
   function toggle() {
-    document.getElementById("test").innerHTML = "1";
     type = event.target.tagName.toLowerCase();
     if (type == "select") {
       v = parseInt(window["slot".concat(event.target.id.substring(4))], 10);
@@ -260,7 +260,6 @@
       document.getElementById("drop".concat(i.toString())).value = ReelLife;
     }
     for (i = 1; i < 65; i++) {
-      document.getElementById("test2").innerHTML = "im running";
       if (window["se".concat(i.toString())][1] == true) {
         for (b = 1; b < 11; b++) {
           document.getElementById("opt".concat(b.toString(), ".", i.toString())).disabled = true;
